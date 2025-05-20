@@ -1,10 +1,9 @@
 ---
-
+const { pathname } = Astro.url;
 ---
-
 <div class="nav-links">
-    <a href="/" rel="home">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <a href="/tags/">Tags</a>
+    <a class={pathname.split('/')[1] === '' ? 'active' : ''}href="/" rel="home">Home</a>
+    <a class={pathname.split('/')[1] === 'about' ? 'active' : ''} href="/about/">About</a>
+    <a class={pathname.split('/')[1] === 'posts' ? 'active' : ''} href="/posts/">Blog</a>
+    <a class={pathname.split('/')[1] === 'tags' ? 'active' : ''}href="/tags/">Tags</a>
 </div>
