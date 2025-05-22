@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 import '../styles/global.css';
-const pageTitle = "About Me";
+const pageTitle = "Me, Myself and Xhiena";
 
 const identity = {
     firstName: "Sarah",
@@ -11,39 +11,31 @@ const identity = {
     hobbies: ["photography", "birdwatching", "baseball"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
-const happy = true;
-const finished = false;
-const goal = 3;
-
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
+const skills = ["Couching", "Full Lifecycle development", "Business Processes analysis", "E-commerce and websites", "Problem solving", "Salesforce (Architecture, development, admin)", "Agile Development","Project & program management","Software analysis and design","CPQ","Contract Management","Business Processes implementation","API First Design","Solution Design","API (REST, SOAP)"];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <h2>... and my new Astro site!</h2>
 
-    <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
+    <p>Hi! I'm Pablo, also known as xhiena and I don't like the standard "I'm a software engineer with 20 years of experience…" type of presentations… 
+        when I met new people usually the topics go: me, job, hobbies,… and if something clicks we expand… so… 
+    </p>
+<h2>Me!</h2><p>I am a person, father, Spanish, from Valencia. Lived in Amsterdam for 10 years, now back to Spain. Sharing my wife and son with 2 cats 
+    (she is the Alpha-cat, I'm one of the clowder).</p>
 
-    <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-    <p>Here are a few facts about me:</p>
-    <ul>
-        <li>My name is {identity.firstName}.</li>
-        <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-        {identity.hobbies.length >= 2 &&
-        <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-        }
-    </ul>
-    <p>My skills are:</p>
-    <ul>
-        {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
+<h2>Job!</h2> <p>I work as Technology Leader for Expereo, what I really do is meet with a lot of people trying to understand the real problem 
+    or need of what is needed to be develop and guide the developers on how we can fix it or improve it (sometimes, I have really good ideas). </p>
+    <p>Also, I try to keep my devs sane and help with planning and strategy... You can see more of my work life in linkedin. </p>
+    <p>After being developing web applications &amp; integrations for more than 10 years, I made the step up to a managing position,
+    and then went back to the real action, still happy with that decision. I'm interested in development, SaaS, the internet of things, automation, 
+    improving processes and implementations... but my main focus now is learn more (it's never enough) about team dynamics, leadership and project management. </p>
 
-    {happy && <p>I am happy to be learning Astro!</p>}
+<h2>Hobbies!</h2> <p>I like to build things, metal models, Lego sets, puzzles,… I also like to play videogames, but now I'm more of a casual player (small kid, you know...).
+    I am re-discovering a new way of playing: couch co-op with my girlfriend. Sometimes it's challenging, the puzzles are also outside the game :p</p>
+    <p>I like games like Assassins creed, Lara croft, God of war, Zelda's, Lego's,… a combination of puzzles and action.
+    </p>
+    <p>I try to keep up with movies and TV-series, manage automations of my house in Home assistant… but time is a scarce resource.
+    Since I'm father all my free time usually goes playing with my son (not complaining)</p>
 
-    {finished && <p>I finished this tutorial!</p>}
+<p>In a sentence: Sofware engineer by day, father/tinkerer by evenings, bad sleeper at night, techy all the time.</p>
 
-    {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 </BaseLayout>

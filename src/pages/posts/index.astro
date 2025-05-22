@@ -2,11 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogPost from '../../components/BlogPost.astro';
 const allPosts = Object.values(import.meta.glob('./*.md', { eager: true }));
-const pageTitle = "My Astro Learning Blog";
+allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+const pageTitle = "All my posts";
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<p>This is where I will post about my journey learning Astro.</p>
-	<ul>
-		{allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
-	</ul>
+	<p>This is where you can find all my posts.</p>
+	<div class="post-list">
+		{allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} excerpt={post.frontmatter.description} date={post.frontmatter.pubDate} tags={post.frontmatter.tags}/>)}
+	</div>
 </BaseLayout>

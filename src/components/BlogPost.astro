@@ -1,4 +1,20 @@
 ---
-const { title, url } = Astro.props;
+const {date, title, url , excerpt, tags} = Astro.props;
+const dateOptions: object = {
+	year: "numeric",
+	month: "long",
+	day: "numeric",
+};
+const formattedPublishDate = new Date(date).toLocaleDateString("en-GB", dateOptions);
 ---
-<li><a href={url}>{title}</a></li>
+<div class="post">
+    <h2 class="post-title"><a href={url}>{title}</a></h2>
+    <div class="post-tags">
+        <div class="post-info">Posted on {formattedPublishDate}</div>
+        {tags.map((tag: string) => (
+        <div class="tag"><a href={`/tags/${tag}`}>#{tag}</a></div>
+        ))}
+    </div>
+    <div class="post-excerpt">{excerpt}</div>
+    <div class="read-nore"><a href={url}>Read more</a></div>
+</div>

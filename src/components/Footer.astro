@@ -1,15 +1,15 @@
 ---
 import Social from './Social.astro';
+import { Image } from 'astro:assets';
+import avatar from '../images/avatar.png';
 ---
-<style>
-  footer {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-</style>
+
 <footer>
-  <Social url="twitter.com" platform="twitter" username="x_hiena" />
-  <Social url="github.com" platform="github" username="xhiena" />
-  <Social url="mastodon.social" platform="mastodon" username="@xhiena" />
+  <div class="footer-content">
+    <a rel="home" id="footer-avatar" href="/"><Image alt="Pablo's avatar" src={avatar} wight=33 height=33 loading="eager"></a>
+    <Social url="twitter.com" platform="Twitter" username="x_hiena" />
+    <Social url="github.com" platform="Github" username="xhiena" />
+    <Social url="mastodon.social" platform="Mastodon" username="@xhiena" />
+    <Social url="www.linkedin.com/in/" platform="Linkedin" username="pablomartinezperez" />
+  </div>
 </footer>

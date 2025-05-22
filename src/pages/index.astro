@@ -1,7 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
+const postsInHome=2;
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+const homePosts=allPosts.slice(0,postsInHome);
+const showarchivelink=(allPosts.length)>postsInHome;
 const pageTitle = "Home Page";
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<h2>My awesome blog subtitle</h2>
+	<div class="post-list">
+	{homePosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} excerpt={post.frontmatter.description} date={post.frontmatter.pubDate} tags={post.frontmatter.tags}/>)}
+	</div>
+	{showarchivelink && <div class="moreposts"><a href="/posts/">Check more posts</a></div>}
 </BaseLayout>

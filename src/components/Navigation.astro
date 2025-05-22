@@ -2,8 +2,8 @@
 const { pathname } = Astro.url;
 ---
 <div class="nav-links">
-    <a class={pathname.split('/')[1] === '' ? 'active' : ''}href="/" rel="home">Home</a>
-    <a class={pathname.split('/')[1] === 'about' ? 'active' : ''} href="/about/">About</a>
-    <a class={pathname.split('/')[1] === 'posts' ? 'active' : ''} href="/posts/">Blog</a>
-    <a class={pathname.split('/')[1] === 'tags' ? 'active' : ''}href="/tags/">Tags</a>
+    <a aria-current={pathname.split('/')[1] === '' ? 'page' : 'false'} class={pathname.split('/')[1] === '' ? 'active' : ''} href="/" rel="home">Home</a>
+    <a aria-current={pathname.split('/')[1] === 'about' ? 'page' : 'false'} class={pathname.split('/')[1] === 'about' ? 'active' : ''} href="/about/">About</a>
+    <a aria-current={pathname.split('/')[1] === 'posts' ? 'page' : 'false'} class={pathname.split('/')[1] === 'posts' ? 'active' : ''} href="/posts/">Blog</a>
+    <a aria-current={pathname.split('/')[1] === 'tags' ? 'page' : 'false'} class={pathname.split('/')[1] === 'tags' ? 'active' : ''}href="/tags/">Tags</a>
 </div>
