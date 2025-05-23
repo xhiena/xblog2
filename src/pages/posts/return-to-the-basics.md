@@ -5,7 +5,7 @@ pubDate: 2025-05-21
 description: 'After some years and tons of CMS... returning to static pages with a simple design'
 author: 'Pablo'
 image:
-    url: '/src/images/comicstrip-wonttaketoomuch.png'
+    url: '/images/comicstrip-wonttaketoomuch.png'
     alt: "comicstrip with pablo realizing that it wasn't as easy as he thougth"
 tags: ["astro", "blogging"]
 ---
