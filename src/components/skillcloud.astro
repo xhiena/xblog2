@@ -1,0 +1,15 @@
+---
+import wordcloud from '../images/wordcloud.png';
+import { Image } from 'astro:assets';
+
+const { skilllist } = Astro.props;
+
+const altimg= skilllist.join(", ");
+
+---
+<div id="word-cloud-container">
+    <Image alt={altimg} src={wordcloud} loading="eager"></Image>
+</div>
+
+
+    

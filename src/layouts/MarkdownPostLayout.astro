@@ -9,12 +9,15 @@ const dateOptions: object = {
 const formattedPublishDate = new Date(frontmatter.pubDate).toLocaleDateString("en-GB", dateOptions);
 ---
 <BaseLayout pageTitle={frontmatter.title} description={frontmatter.description} cssclass="postpage">
-    <p class="post-date">Published on: {formattedPublishDate}</p>
-    <div class="post-tags">
-        &nbsp;In: {frontmatter.tags.map((tag: string) => (
-        <div class="tag"><a href={`/tags/${tag}`}>#{tag}</a></div>
-        ))}
-    </div>
-    <p>{frontmatter.description}</p>
-    <slot />
+    <article class="article">
+        <p class="post-date">Published on: {formattedPublishDate}</p>
+        <div class="post-tags">
+            &nbsp;In: {frontmatter.tags.map((tag: string) => (
+            <div class="tag"><a href={`/tags/${tag}`}>#{tag}</a></div>
+            ))}
+        </div>
+        {frontmatter.image && <img id="post-image" src={frontmatter.image.url} alt={frontmatter.image.alt} /> }
+        <p>{frontmatter.description}</p>
+        <slot />
+    </article>
 </BaseLayout>

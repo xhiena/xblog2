@@ -8,6 +8,6 @@ const pageTitle = "All my posts";
 <BaseLayout pageTitle={pageTitle}>
 	<p>This is where you can find all my posts.</p>
 	<div class="post-list">
-		{allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} excerpt={post.frontmatter.description} date={post.frontmatter.pubDate} tags={post.frontmatter.tags}/>)}
+		{allPosts.map((post: any) => <BlogPost url={post.url} content={post.frontmatter} />)}
 	</div>
 </BaseLayout>

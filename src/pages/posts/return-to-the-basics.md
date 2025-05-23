@@ -2,11 +2,11 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Return to the basics'
 pubDate: 2025-05-21
-description: 'After some years and tons of CMS... returning to static pages with simple css'
+description: 'After some years and tons of CMS... returning to static pages with a simple design'
 author: 'Pablo'
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
+    url: '/src/images/comicstrip-wonttaketoomuch.png'
+    alt: "comicstrip with pablo realizing that it wasn't as easy as he thougth"
 tags: ["astro", "blogging"]
 ---
 

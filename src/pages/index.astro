@@ -6,11 +6,11 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
 allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
 const homePosts=allPosts.slice(0,postsInHome);
 const showarchivelink=(allPosts.length)>postsInHome;
-const pageTitle = "Home Page";
+const pageTitle = "Home Page - Last Posts";
 ---
 <BaseLayout pageTitle={pageTitle}>
 	<div class="post-list">
-	{homePosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} excerpt={post.frontmatter.description} date={post.frontmatter.pubDate} tags={post.frontmatter.tags}/>)}
+	{homePosts.map((post: any) => <BlogPost url={post.url} content={post.frontmatter} />)}
 	</div>
 	{showarchivelink && <div class="moreposts"><a href="/posts/">Check more posts</a></div>}
 </BaseLayout>

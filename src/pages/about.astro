@@ -1,21 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Skillcloud from '../components/skillcloud.astro';
 
 import '../styles/global.css';
+import { SlotString } from 'astro/runtime/server/render/slot.js';
 const pageTitle = "Me, Myself and Xhiena";
 
-const identity = {
-    firstName: "Sarah",
-    country: "Canada",
-    occupation: "Technical Writer",
-    hobbies: ["photography", "birdwatching", "baseball"],
-};
-
-const skills = ["Couching", "Full Lifecycle development", "Business Processes analysis", "E-commerce and websites", "Problem solving", "Salesforce (Architecture, development, admin)", "Agile Development","Project & program management","Software analysis and design","CPQ","Contract Management","Business Processes implementation","API First Design","Solution Design","API (REST, SOAP)"];
+const skills = ["Pablo","xhiena","Father","Husband","Couching","Full Lifecycle development","Business Processes analysis","Problem solving","Salesforce","Agile Development","Project  management","Program management","CPQ","Software Development","Software architect","API First Design","Solution Design","Contract Management","Business Processes implementation","Javascript","HTML","CSS","API","REST","SOAP","GraphQL","Ecommerce","Blog","Strategy","Planning","Beard","Bike","Puzzles","Starwars","Star Trek","TV series","Automation","Speaker","Guitar","Linux","Android","Home Assistant","Thinking outside the box","Creative","Imaginative","Solution Focus","E2E focused","Holistic approach","Fun","Spanish","Netherlands","Sagunto","Puerto de Sagunto","Valencia","Spain","Comics","Manga","Books","Movies","Liefde","Dad jokes","Dad jokes","Beach","Sun","Friend","Lord of the Rings","Hobbit","E-reader","Pablorgini","Web","SSL","AWS","Azure","Jquery","PHP","Apache","Tomcat","Expert","Calm","easy going","PlayStation","Switch","Homelab","La Vaca lola","Biking with my kid","Team Leader","Tech Lead","Platform","Manager","Home automation","Train","Miniatures","Scheduling","La vaca lola","Tiene cabeza","y tiene cola","y hace muuuuuuu","Javascript","Couch","CPQ","Puzzles","Manga","Books","Pikachu","Articuno","Armarouge","Charizard","Electivire","Garchomp","Lapras","Tyranitar","Heracross ","Venusaur","Flareon","Kadabra ","Arceus","Dragonite","Goku","Vegeta","Gohan","Problem solving","Cell","Piccolo","Frieza","Frizer","Tao Pai Pai","Ginyu Force","Forces Specials","Sayan","Architecture ","analysis ","business drivers","goals","ATAM ","software development life cycle","System Design","Requirements","Scalability","System Architecture","Database","Software Engineering","Modularity","Abstraction","Encapsulation","Reusability","Maintenance","Testing","Design Patterns","Agile methodologies","Continuous Integration & Deployment:","CI/CD","Efficiency","Reliability","Reusability","Maintainability","Roles","Product","Portability","Interoperability","Attention to detail","Security","Networks","OSI ","Communication","Internet ","Python","DevOps","Machine Learning","Data Visualization","Business Intelligence","BI","GIT","Docker ","Hosting","Datafication","Net Neutrality","Digital Divide","XaaS","SaaS","PaaS","Gamification","Distributed Cloud","IOB","IOT","Hyperautomation","Web3","Digitization","Digital Transformation","Transformation","Digital Disruption","Analytics","Microservices","UX","UI","IaaS","AI Agents","Real time ","accelerator","explainability","standup","Adaptable","Strategic","Multidisciplinary","Analytical","Resourceful","determined","Adept","Cheerful","Direct","Enthusiastic","Flexible","Generous","Helpful","Honest","Intelligent","Intuitive","Inventive","Knowledgeable","Logical","Perceptive","Reliable","Respectful","Tolerant","Sympathetic","Successful","Wise","Systematic","Task-driven","Accountable","Eager","Experienced","Resourceful","Troubleshooter","Unconventional","Capable","Dynamic","AC/DC","Queen","Daft Punk","Heroes del silencio","Collaborative","Detail-oriented","Methodical","Adaptable","Clever ","Curious ","Dynamic ","Gentle ","Humorous"];
+const description="Discover Pablo, an amazing guy and tremendous profesional, words that describe him: "+skills.slice(2,15).join(", ");
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-
+<BaseLayout pageTitle={pageTitle} description={description}>
+<Skillcloud skilllist={skills} />
     <p>Hi! I'm Pablo, also known as xhiena and I don't like the standard "I'm a software engineer with 20 years of experience…" type of presentations… 
         when I met new people usually the topics go: me, job, hobbies,… and if something clicks we expand… so… 
     </p>
@@ -24,10 +20,11 @@ const skills = ["Couching", "Full Lifecycle development", "Business Processes an
 
 <h2>Job!</h2> <p>I work as Technology Leader for Expereo, what I really do is meet with a lot of people trying to understand the real problem 
     or need of what is needed to be develop and guide the developers on how we can fix it or improve it (sometimes, I have really good ideas). </p>
-    <p>Also, I try to keep my devs sane and help with planning and strategy... You can see more of my work life in linkedin. </p>
+    <p>Also, I try to keep my devs sane and help with planning and strategy... You can see more of my work life in <a href="https://www.linkedin.com/in//pablomartinezperez" target="_blank">linkedin</a>. </p>
     <p>After being developing web applications &amp; integrations for more than 10 years, I made the step up to a managing position,
     and then went back to the real action, still happy with that decision. I'm interested in development, SaaS, the internet of things, automation, 
     improving processes and implementations... but my main focus now is learn more (it's never enough) about team dynamics, leadership and project management. </p>
+    <p>In Between job and Hobby is being speaker in meetups and conferences. In the Techsummit Europe 2023 I did a talk about automation, and since them in some meet ups talking about software developemnt and it's challenges</p>
 
 <h2>Hobbies!</h2> <p>I like to build things, metal models, Lego sets, puzzles,… I also like to play videogames, but now I'm more of a casual player (small kid, you know...).
     I am re-discovering a new way of playing: couch co-op with my girlfriend. Sometimes it's challenging, the puzzles are also outside the game :p</p>

@@ -31,8 +31,9 @@ header{
 .content{
   margin: 0 auto;
   width: 100%;
-  max-width: 80ch;
+  max-width: 105ch;
   padding: 1rem;
+  text-align:justify;
 }
 * {
   box-sizing: border-box;
@@ -118,17 +119,22 @@ h2.post-title{
   text-decoration: none;
   text-transform: capitalize;
 }
-.postpage h1{
-  text-align: center;
-}
+
 .post-tags{
   display:flex;
   flex-wrap:wrap;
 
 }
-
 .post-tags .tag {
   padding:0 5px;
+}
+.post-list .post{
+  background-position: center right;
+  background-size: auto 200%;
+  background-repeat: no-repeat;
+}
+.postpage h1{
+  text-align: center;
 }
 .postpage .post-date{
   text-align: center;
@@ -139,6 +145,16 @@ h2.post-title{
 }
 .moreposts{
   padding: 5em 0;
+}
+#post-image{
+  margin-top:10px;
+  width: 100%;
+  height: auto;
+}
+
+#word-cloud-container img{
+  width: 100%;
+  height: auto;
 }
 
 footer {
