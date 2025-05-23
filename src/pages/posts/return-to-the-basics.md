@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Return to the basics'
-pubDate: 2025-05-21
+pubDate: 2025-05-22
 description: 'After some years and tons of CMS... returning to static pages with a simple design'
 author: 'Pablo'
 image:
