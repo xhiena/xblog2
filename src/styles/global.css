@@ -23,7 +23,7 @@ body {
 }
 header{
   background-color: var(--azul-principal);
-  background-image: url("/src/images/avatar.png"); 
+  background-image: url("/images/avatar.png"); 
   background-position: center center;
   background-repeat: no-repeat;
 
@@ -91,7 +91,6 @@ nav{
 
 h1, h2, h3, h4, h5, h6, b{
     color: var(--azul-principal); 
-    text-transform: ;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, b a{
     text-decoration: none;
